@@ -65,6 +65,4 @@ nvim_tree.setup {
       },
     },
   },
-  git_hl = 1,
-
 }

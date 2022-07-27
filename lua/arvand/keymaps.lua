@@ -32,6 +32,7 @@ keymap("n", "<C-A-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bd", ":bdelete<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -44,10 +45,6 @@ keymap("v", "<C-c>", "\"+y", opts)
 keymap("n", "<C-d>", "\"+P", opts) 
 keymap("v", "<C-d>", "\"+P", opts) 
 
--- Insert --
--- Press ne fast to enter
-keymap("i", "ne", "<ESC>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -56,7 +53,18 @@ keymap("v", ">", ">gv", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
--- Plugins --
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ++ PLUGINS
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- Vim-Gui-Zoom
+-- ONLY WORKS IN NEOVIDE - in nvim its - and =
+keymap("n", "<C-+>", ":ZoomIn<CR>", opts)
+keymap("n", "<C-->", ":ZoomOut<CR>", opts)
+
+-- Vim-Expand-Region
+-- keymap("n", "-", "<Plug>(expand_region_shrink)", opts)
+vim.cmd [[map - <Plug>(expand_region_shrink)]]
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

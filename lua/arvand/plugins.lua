@@ -56,6 +56,12 @@ return packer.startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" }
   use { "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" }
 
+  -- Allows to zoom in and out for neovide
+  use { "drzel/vim-gui-zoom"}
+
+  -- With + and - you can extend an schrink the selection
+  use { "terryma/vim-expand-region"}
+
   -- Nvim-Tree
 use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }
 }
