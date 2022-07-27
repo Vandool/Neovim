@@ -1,5 +1,12 @@
 # A Basic Stable IDE config for Neovim
 
+> Where to get more information about configuring neovim with lua?
+
+
+You wanna check the tutorials from original publisher of this repo 
+
+https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+
 > Why does this repo exist?
 
 This config attempts to provide a rock solid fully featured starting point for someone new to Neovim, or just tired of maintaining the basic IDE components of their config. 
