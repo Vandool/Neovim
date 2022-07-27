@@ -1,10 +1,11 @@
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
-local opts = { silent = true }
+local opts = { noremap = true, silent = true }
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<Space>", "<Nop>", opts) -- makes sure space is not mapped to anything else
+
 vim.g.mapleader = " "
 
 -- Modes
@@ -17,16 +18,16 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)    -- LEFT
+keymap("n", "<C-k>", "<C-w>j", opts)    -- DOWN
+keymap("n", "<C-j>", "<C-w>k", opts)    -- UP
+keymap("n", "<C-l>", "<C-w>l", opts)    -- RIGHT
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-A-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-A-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-A-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-A-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -38,17 +39,22 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
--- Better paste
-keymap("v", "p", '"_dP', opts)
+-- Copy/Paste
+keymap("v", "<C-c>", "\"+y", opts)
+keymap("n", "<C-d>", "\"+P", opts) 
+keymap("v", "<C-d>", "\"+P", opts) 
 
 -- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- Press ne fast to enter
+keymap("i", "ne", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Better paste
+keymap("v", "p", '"_dP', opts)
 
 -- Plugins --
 
