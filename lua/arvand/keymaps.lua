@@ -39,8 +39,8 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Copy/Paste
 keymap("v", "<C-c>", "\"+y", opts)
-keymap("n", "<C-d>", "\"+P", opts) 
-keymap("v", "<C-d>", "\"+P", opts) 
+keymap("n", "<C-d>", "\"+P", opts)
+keymap("v", "<C-d>", "\"+P", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -61,6 +61,7 @@ keymap("n", "<C-->", ":ZoomOut<CR>", opts)
 
 -- Vim-Expand-Region
 -- keymap("n", "-", "<Plug>(expand_region_shrink)", opts)
+vim.cmd [[map + <Plug>(expand_region_expand)]]
 vim.cmd [[map - <Plug>(expand_region_shrink)]]
 
 -- NvimTree
@@ -68,6 +69,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+--keymap("n", "<leader>fr", "<cmd>lua require'telescope.builtin'.find_files(require.('telescope.themes').get_ivy())<cr>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
