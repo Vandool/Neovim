@@ -35,7 +35,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<leader>c", "<cmd>nohlsearch<CR>", opts)
 
 -- Copy/Paste
 keymap("v", "<C-c>", "\"+y", opts)
@@ -76,6 +76,14 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap({"n", "v"}, "<leader>hs",  ":Gitsigns stage_hunk<cr>", opts)
+keymap({"n", "v"}, "<leader>hr",  ":Gitsigns reset_hunk<cr>", opts)
+keymap("n", "<leader>hb", ":Gitsigns blame_line<cr>", opts)
+keymap("n", "<leader>hp", ":Gitsigns preview_hunk<cr>", opts)
+keymap("n", "<leader>hd", ":Gitsigns diffthis<cr>", opts)
+keymap("n", "<leader>htd", ":Gitsigns toggle_deleted<cr>", opts)
+keymap("n", "<leader>htb", ":Gitsigns toggle_current_line_blame<cr>", opts)
+
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)

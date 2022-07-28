@@ -6,27 +6,22 @@ require (string.format("%s.colorscheme", user))
 require (string.format("%s.cmp", user))
 require (string.format("%s.nvim-tree", user))
 require (string.format("%s.vim-airline", user))
---require "user.autocommands"
-
---require "user.telescope"
+--require (string.format("%s.autocommands", user))
 require (string.format("%s.telescope", user))
---require "user.treesitter"
---require "user.autopairs"
---require "user.comment"
---require "user.gitsigns"
---require "user.bufferline"
---require "user.lualine"
---require "user.toggleterm"
---require "user.project"
---require "user.impatient"
---require "user.illuminate"
---require "user.indentline"
---require "user.alpha"
-
---require "user.lsp"
-require (string.format("%s.lsp", user)) -- .init.lua will be implied
---require "user.dap"
-
+require (string.format("%s.treesitter", user))
+require (string.format("%s.autopairs", user))
+require (string.format("%s.comment", user))
+require (string.format("%s.gitsigns", user))
+require (string.format("%s.bufferline", user))
+require (string.format("%s.toggleterm", user))
+--require (string.format("%s.lualine", user))
+--require (string.format("%s.project", user))
+--require (string.format("%s.impatient", user))
+--require (string.format("%s.illuminate", user))
+--require (string.format("%s.indentline", user))
+--require (string.format("%s.alpha", user))
+--require (string.format("%s.lsp", user)) -- .init.lua will be implied
+--require (string.format("%s.dap", user)) -- .init.lua will be implied
 
 -- Require as the last option so it override previous calls
 -- on the font and the font size 
