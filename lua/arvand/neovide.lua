@@ -1,7 +1,9 @@
 --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 --+       NEOVIDE GUI STUFF
 --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-vim.cmd [[set guifont=SauceCodePro\ Nerd\ Font:h18]]
+
+vim.cmd [[set guifont="monospace:h14"]]
+vim.cmd [[let g:python_highlight_all = 1]]
 
 --Some nonesense
 --let g:neovide_cursor_vfx_mode = "railgun"
