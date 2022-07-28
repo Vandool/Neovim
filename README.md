@@ -165,6 +165,10 @@ You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-bas
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [DAPInstall.nvim](https://github.com/ravenxrz/DAPInstall.nvim)
 
+Additionally:
+-[vim-gui-zoom](https://github.com/drzel/vim-gui-zoom)
+-[vim-expand-region](https://github.com/terryma/vim-expand-region)
+
 ---
 
 > The computing scientist's main challenge is not to get confused by the complexities of his own making. 
