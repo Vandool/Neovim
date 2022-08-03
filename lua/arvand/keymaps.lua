@@ -84,6 +84,9 @@ keymap("n", "<leader>hd", ":Gitsigns diffthis<cr>", opts)
 keymap("n", "<leader>htd", ":Gitsigns toggle_deleted<cr>", opts)
 keymap("n", "<leader>htb", ":Gitsigns toggle_current_line_blame<cr>", opts)
 
+-- Formatter
+keymap("n", "<leader>nl", ":<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
+keymap("n", "<leader>ni", ":NullLsInfo<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)

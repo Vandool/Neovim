@@ -14,13 +14,14 @@ require (string.format("%s.comment", user))
 require (string.format("%s.gitsigns", user))
 require (string.format("%s.bufferline", user))
 require (string.format("%s.toggleterm", user))
+require (string.format("%s.whichkey", user))
 --require (string.format("%s.lualine", user))
 --require (string.format("%s.project", user))
 --require (string.format("%s.impatient", user))
 --require (string.format("%s.illuminate", user))
 --require (string.format("%s.indentline", user))
---require (string.format("%s.alpha", user))
---require (string.format("%s.lsp", user)) -- .init.lua will be implied
+require (string.format("%s.alpha", user))
+require (string.format("%s.lsp", user)) -- .init.lua will be implied
 --require (string.format("%s.dap", user)) -- .init.lua will be implied
 
 -- Require as the last option so it override previous calls
