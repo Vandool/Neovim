@@ -65,28 +65,32 @@ vim.cmd [[map + <Plug>(expand_region_expand)]]
 vim.cmd [[map - <Plug>(expand_region_shrink)]]
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+-- moved to whichkey.lua
+-- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+-- commented outs are moved to whichkey.lua
+-- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 --keymap("n", "<leader>fr", "<cmd>lua require'telescope.builtin'.find_files(require.('telescope.themes').get_ivy())<cr>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+-- keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+-- keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
+-- keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-keymap({"n", "v"}, "<leader>hs",  ":Gitsigns stage_hunk<cr>", opts)
-keymap({"n", "v"}, "<leader>hr",  ":Gitsigns reset_hunk<cr>", opts)
-keymap("n", "<leader>hb", ":Gitsigns blame_line<cr>", opts)
-keymap("n", "<leader>hp", ":Gitsigns preview_hunk<cr>", opts)
-keymap("n", "<leader>hd", ":Gitsigns diffthis<cr>", opts)
-keymap("n", "<leader>htd", ":Gitsigns toggle_deleted<cr>", opts)
-keymap("n", "<leader>htb", ":Gitsigns toggle_current_line_blame<cr>", opts)
+-- moved to whichkey.lua
+-- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+-- keymap({"n", "v"}, "<leader>hs",  ":Gitsigns stage_hunk<cr>", opts)
+-- keymap({"n", "v"}, "<leader>hr",  ":Gitsigns reset_hunk<cr>", opts)
+-- keymap("n", "<leader>hb", ":Gitsigns blame_line<cr>", opts)
+-- keymap("n", "<leader>hp", ":Gitsigns preview_hunk<cr>", opts)
+-- keymap("n", "<leader>hd", ":Gitsigns diffthis<cr>", opts)
+-- keymap("n", "<leader>htd", ":Gitsigns toggle_deleted<cr>", opts)
+-- keymap("n", "<leader>htb", ":Gitsigns toggle_current_line_blame<cr>", opts)
 
 -- Formatter
-keymap("n", "<leader>nl", ":<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
-keymap("n", "<leader>ni", ":NullLsInfo<CR>", opts)
+-- moved to whichkey.lua
+--keymap("n", "<leader>nl", ":<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
+--keymap("n", "<leader>ni", ":NullLsInfo<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
